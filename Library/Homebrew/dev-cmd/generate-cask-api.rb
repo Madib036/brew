@@ -19,6 +19,9 @@ module Homebrew
       end
 
       sig { override.void }
+      ##
+      # Generates homebrew/cask API data files for HOMEBREW_API_WWW in the current directory.
+      # If the dry-run switch is set, performs a generation simulation without writing files.
       def run
         # odeprecated "brew generate-cask-api", "brew generate-package-api --only-cask"
 

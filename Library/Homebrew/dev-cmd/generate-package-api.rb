@@ -27,6 +27,9 @@ module Homebrew
       end
 
       sig { override.void }
+      ##
+      # Run the command to generate Homebrew API data files according to the command-line options.
+      # Instantiates Homebrew::API::Generator with flags derived from the command's switches and invokes generation; files are written to the current directory unless run with the dry-run option.
       def run
         Homebrew::API::Generator.new(
           only_core:     args.only_core?,
