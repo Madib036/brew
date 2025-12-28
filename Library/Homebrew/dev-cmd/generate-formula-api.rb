@@ -19,6 +19,9 @@ module Homebrew
       end
 
       sig { override.void }
+      ##
+      # Generate homebrew/core API data files for the Homebrew API website, writing them to the current directory.
+      # When the command's dry-run option is enabled, perform generation without writing files.
       def run
         # odeprecated "brew generate-formula-api", "brew generate-package-api --only-core"
 
